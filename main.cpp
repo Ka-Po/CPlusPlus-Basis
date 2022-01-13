@@ -9,12 +9,15 @@ int main() {
    // return 0;
     
     //Pointer
-    int number = 5 ;
-    int* numberPtr = &number ;
-    cout << &number << endl ;
-    cout << *numberPtr << endl ;
+    //int number = 5 ;
+    //int* numberPtr = &number ;
+    //cout << &number << endl ;
+   // cout << *numberPtr << endl ;
+    
+    
+    int x;
+    x = 1;
+    printf("x\n");
     
     
 }
-
-
