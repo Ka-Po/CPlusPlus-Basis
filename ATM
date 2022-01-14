@@ -2,14 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void showSelection(){
-    cout<<"---Selection---" <<endl;
-    cout<<" 1. Check balance"  <<endl;
-    cout<<" 2. Deposit"  <<endl;
-    cout<<" 3. Withdraw"  <<endl;
-    cout<<" 4. Exit"  <<endl;
-    cout<<"----------------"  <<endl;
-}
+void showSelection();
 
 int main() {
     // check balance, deposit, withdraw, show menu
@@ -43,5 +36,12 @@ int main() {
         //system("puase>0");            // Xcode 没有見到效果
     }
 
-
+void showSelection(){
+    cout<<"---Selection---" <<endl;
+    cout<<" 1. Check balance"  <<endl;
+    cout<<" 2. Deposit"  <<endl;
+    cout<<" 3. Withdraw"  <<endl;
+    cout<<" 4. Exit"  <<endl;
+    cout<<"----------------"  <<endl;
+}
 
