@@ -12,7 +12,6 @@ int main() {
         showSelection();
         cout << "Select : ";
         cin >> select;
-        //system("cls");                    // 當輸入return後，消失原來顯示的文字！但在 Xcode 没有見到效果
         
         switch (select) {
             case 1:cout << "Balance is : $" << balance << endl; break;
@@ -32,7 +31,6 @@ int main() {
             break;
         }
         }while (select != 4) ;
-        //system("puase>0");            // Xcode 没有見到效果
     }
 
 void showSelection(){
