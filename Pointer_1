@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     
     int box = 222;
-    int * P1 = &box;
+    int * P1 = &box;            // 與變數觀念不同
     
     cout<<&box<<endl;
     cout<<P1<<endl;
