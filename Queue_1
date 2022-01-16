@@ -11,7 +11,7 @@ void showQueue(queue<int> queue){
 }
 
 int main() {
-                // empty, size, push, pop, front, back                                          // Queue與Stack的比較，就是 front,back 與 top 的不同！
+                // empty, size, push, pop, front, back                              // Queue與Stack的比較，就是 front,back 與 top 所讀的位置不同！pop出來就不同
     queue<int>numberOfQueue;
     numberOfQueue.push(1);
     numberOfQueue.push(2);
