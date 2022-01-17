@@ -27,7 +27,7 @@ int main() {
     Windows wds2;
     wds2.CanTyping();
     
-    Windows* Wds = new Windows();               //OS* Wds = new Windows();
+    Windows* Wds = new Windows();               //OS* Wds = new Windows(); 相同作用
     Wds->CanTyping();
    // Wds->CanDraw();
 };
