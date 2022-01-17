@@ -23,7 +23,11 @@ public:
 };
 
 int main() {
-    OS* Wds = new Windows();
+    
+    Windows wds2;
+    wds2.CanTyping();
+    
+    Windows* Wds = new Windows();               //OS* Wds = new Windows();
     Wds->CanTyping();
    // Wds->CanDraw();
 };
