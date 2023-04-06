@@ -1,9 +1,3 @@
-//  main.cpp
-//  cpp_test
-//
-//  Created by KaPo on 20/3/2023.
-//
-
 //#include <iostream>
 //
 //int main(int argc, const char * argv[]) {
@@ -251,9 +245,71 @@
 
 
 
+//傳值引用
+//#include <iostream>
+//using namespace std;
+//
+////void swap(float,float);//用自己寫的方法去覆蓋原來的預設方法。
+////方法宣告在引用的下方，就要在用引的上方，先寫出同名方法與參數型態。
+///
+//int main(){
+//    float x,y;
+//
+//    cout <<"輸入2個小數，將它們用空格分開：";
+//    cin>>x>>y;
+//    swap(x, y);//佢有個預設方法，去交換兩個數。
+//    cout<<"2個數引用後是："<<x<<"\t"<<y<<endl;
+//    return 0;
+//}
 
-#include <iostream>
-using namespace std;
-int main(){
-    
-}
+////void swap(float a,float b){
+////    float temp = a;
+////    a=b;
+////    b=temp;
+////}
+
+
+
+//傳址引用
+//#include <iostream>
+//using namespace std;
+//
+//void swap(float*,float*);
+//
+//int main(){
+//    float x,y;
+//
+//    cout <<"輸入2個小數，將它們用空格分開：";
+//    cin>>x>>y;
+//    swap(&x, &y);//
+//    cout<<"2個數前後交換之後是："<<x<<"\t"<<y<<endl;
+//    return 0;
+//}
+//
+//void swap(float* a,float* b){
+//    float temp = *a;
+//    *a=*b;
+//    *b=temp;
+//}
+
+
+
+//傳參考的引用，與傳址引用的效果相同，但寫法更加簡單
+//#include <iostream>
+//using namespace std;
+//void swap(float*,float*);
+//int main(){
+//    float x,y;
+//
+//    cout <<"輸入2個小數，將它們用空格分開：";
+//    cin>>x>>y;
+//    swap(x, y);//
+//    cout<<"2個數前後交換之後是："<<x<<"\t"<<y<<endl;
+//    return 0;
+//}
+//
+//void swap(float& a,float& b){
+//    float temp = a;
+//    a=b;
+//    b=temp;
+//}
