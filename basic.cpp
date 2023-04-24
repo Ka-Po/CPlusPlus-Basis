@@ -313,3 +313,161 @@
 //    a=b;
 //    b=temp;
 //}
+
+
+//定義類別之間的加法
+//#include <iostream>
+//using namespace std;
+//
+//class Cs{
+//    friend int operator+(Cs&,Cs&);
+//
+//private:
+//    int Number;
+//public:
+//
+//    Cs(int Cs_Number){
+//        Number=Cs_Number;
+//    }
+//};
+//
+//int operator+(Cs& x,Cs& y){
+//    return (x.Number+y.Number);
+//}
+//
+//int main(){
+//    Cs a(20);
+//    Cs b(30);
+//
+//    cout<<"a+b="<<a+b<<endl;
+//
+//    return 0;
+//}
+
+
+//定義相同類別之間的代入
+//#include <iostream>
+//using namespace std;
+//
+//class Game{
+//public:
+//    int Game_Price;
+//    char *Game_Name;
+//    long Name_Len;
+//
+//    Game(){
+//        int Game_Price;
+//        Name_Len =0;
+//        Game_Name = new char [Name_Len+1];
+//        Game_Name[0]='\0';
+//    }
+//
+//    Game(int x,char *M){
+//        int Game_Price=x;
+//        Name_Len =strlen(M);//配置記憶體
+//        Game_Name = new char [Name_Len+1];
+//        strcpy(Game_Name, M);
+//    }
+//    Game& operator=(Game&);
+//
+//};
+//
+//Game& Game::operator=(Game& Str)
+//{
+//    delete Game_Name;
+//    Game_Name=new char[Name_Len+1];
+//    strcpy(Game_Name, Str.Game_Name);
+//    return *this;
+//}
+//
+//int main(){
+//    Game X(222, "kpRacing");
+//    Game Y;
+//    Y.Game_Name=X.Game_Name;
+//
+//    cout<<"類別為Y的遊戲名稱為："<<Y.Game_Name<<endl;
+//    return 0;
+//}
+
+//用字串string 計算每行文字的字數。
+//#include <iostream>
+//#include <string>
+//#include <cctype>
+//using namespace std;
+//int main(){
+//    string inputline;
+//    while(getline(cin,inputline)){
+//        int n=0;
+//        int i;
+//        int leng = inputline.length();
+//
+//        for(i=0;i<leng;i++){
+//            if(isalpha(inputline[i]) && !isalpha(inputline[i+1]))
+//                n++;
+//        }
+//        cout<<n<<endl;
+//    }
+//    return 0;
+//
+//}
+
+//用遞迴的方法去計算1＋2＋3＋....+n
+//#include <iostream>
+//using namespace std;
+//
+//int g(int n){
+//    if(n==1)
+//        return 1;
+//    else
+//        return g(n-1)+n;
+//}
+//
+//int main(){
+//    cout<<"g(6) = "<<g(6)<<endl;
+//    return 0;
+//}
+
+
+//用多載去比較數值
+//#include <iostream>
+//using namespace std;
+//
+//int comp(int,int);
+//float comp(float,float,float);
+//int main(){
+//    cout<<"1.1,3.1,2.2那個數更大？ 是"<<comp(1.1,3.1,2.2)<<endl;
+//}
+//
+//int comp(int a,int b){
+//    return(a>b)?a:b;
+//}
+//
+//float comp(float a,float b,float c){
+//    float x;
+//    x=(a>b)?a:b;
+//    return (c>x)?c:x;
+//}
+
+//未確定的變數形態，稱為泛型
+//#include <iostream>
+//using namespace std;
+//template <class T>
+//
+//T add(T a,T b){
+//    T c;
+//    c=a+b;
+//    return c;
+//}
+//
+//int main(){
+//    cout<<"4+5= "<<add(4,5)<<endl;
+//    cout<<"2.2+3.3= "<<add(2.2,3.3)<<endl;
+//}
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+}
+
