@@ -129,7 +129,7 @@
 //            continue;
 //        sum+=i;
 //    }
-//    cout<<"1到"<<n<<"不是3的部數的和為"<<sum<<endl;
+//    cout<<"1到"<<n<<"不是3的倍數的和為"<<sum<<endl;
 //
 //    return 0;
 //
@@ -381,7 +381,7 @@
 //}
 //
 //int main(){
-//    Game X(222, "kpRacing");
+//    Game X(222, "ToRacing");
 //    Game Y;
 //    Y.Game_Name=X.Game_Name;
 //
