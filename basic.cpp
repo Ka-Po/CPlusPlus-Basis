@@ -421,7 +421,7 @@
 //};
 //
 //istream& operator >> (istream& in,HKD& Tmp_Money){
-//    cout << "輸入匯率比（香港：中國）"<<endl<<"1元港：人民幣";
+//    cout << "輸入匯率比（香港：中國）"<<endl<<"1港元：人民幣";
 //    in >> Tmp_Money.HK_Exchange_Rate;
 //    return (in);
 //};
