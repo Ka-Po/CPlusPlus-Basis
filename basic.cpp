@@ -245,7 +245,7 @@
 
 
 
-//傳值引用
+//傳數值引用
 //#include <iostream>
 //using namespace std;
 //
@@ -270,7 +270,7 @@
 
 
 
-//傳址引用
+//傳地址引用
 //#include <iostream>
 //using namespace std;
 //
@@ -389,6 +389,65 @@
 //    return 0;
 //}
 
+//類別的型態轉換
+//#include <iostream>
+//using namespace std;
+//
+//class CHD;
+//class HKD{
+//    float HK_Exchange_Rate;
+//
+//public:
+//    HKD(){
+//        HK_Exchange_Rate=40;
+//    }
+//    HKD(float Rate){
+//        HK_Exchange_Rate=Rate;
+//    }
+//friend istream& operator >> (istream& in,HKD& Tmp_Money);
+//    operator CHD();
+//};
+//
+//class CHD{
+//    float CH_Exchange_Rate;
+//public:
+//    CHD(){
+//        CH_Exchange_Rate=40;
+//    }
+//    CHD(float Rate){
+//        CH_Exchange_Rate=Rate;
+//    }
+//    friend ostream& operator << (ostream& out,CHD& Tmp_money);
+//};
+//
+//istream& operator >> (istream& in,HKD& Tmp_Money){
+//    cout << "輸入匯率比（香港：中國）"<<endl<<"1元港：人民幣";
+//    in >> Tmp_Money.HK_Exchange_Rate;
+//    return (in);
+//};
+//
+//ostream& operator << (ostream& out,CHD& Tmp_Money){
+//    out<<Tmp_Money.CH_Exchange_Rate<<"元"<<endl;
+//    return (out);
+//};
+//
+//HKD::operator CHD(){
+//    float CH_Exchange_Rate=1/HK_Exchange_Rate;
+//    return (CHD(CH_Exchange_Rate));
+//};
+//
+//int main(){
+//    HKD HK_Dollar;
+//    CHD CH_Collar;
+//    cin >> HK_Dollar;
+//    CH_Collar = HK_Dollar;
+//    cout << endl;
+//    cout << "等於匯率比（中國：香港）"<<endl<<"1元人民幣："<<CH_Collar;
+//
+//    return 0;
+//}
+
+
 //用字串string 計算每行文字的字數。
 //#include <iostream>
 //#include <string>
@@ -464,10 +523,51 @@
 //    cout<<"2.2+3.3= "<<add(2.2,3.3)<<endl;
 //}
 
-#include <iostream>
-using namespace std;
-
-int main(){
-    
-}
+//類別的解構子
+//#include <iostream>
+//#include <cstring>
+//using namespace std;
+//
+//class MathsSubject{
+//private:
+//    char student[20];
+//    int score;
+//
+//public:
+//    MathsSubject();
+//    void showstudent();
+//    MathsSubject(char *name,int A);
+//
+//    ~MathsSubject(){
+//        cout<<"將會被釋放的保存資源為："<<student<<endl;
+//    }
+//};
+//
+//MathsSubject::MathsSubject(){
+//    strcpy(student,"家寶");
+//    score=66;
+//}
+//
+//MathsSubject::MathsSubject(char *name,int A){
+//    strcpy(student, name);
+//    score=A;
+//}
+//
+//void MathsSubject::showstudent(){
+//    cout<<"學生名字："<<student<<endl;
+//    cout<<"數學得分："<<score<<endl;
+//}
+//
+//void calculate_score(){
+//    MathsSubject s1;
+//    MathsSubject s2("小宁",65);
+//    s1.showstudent();
+//    s2.showstudent();
+//}
+//
+//int main(){
+//    calculate_score();
+//
+//    return 0;
+//}
 
