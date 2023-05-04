@@ -15,6 +15,8 @@
 //    return 0;
 //}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //條件
 //#include <iostream>
 //using namespace std;
@@ -33,34 +35,7 @@
 //}
 
 
-//情況
-//#include <iostream>
-//using namespace std;
-//
-//int main(){
-//
-//    int n1,n2;
-//    char op;
-//    cout<<"順序輸入第1個數，運算子，第2個數";
-//    cin>>n1>>op>>n2;
-//    switch(op){
-//        case '+':cout<<n1 + n2<<endl;
-//            break;
-//        case '-':cout<<n1 - n2<<endl;
-//            break;
-//        case '*':cout<<n1 * n2<<endl;
-//            break;
-//        case '/':cout<<n1 / n2<<endl;
-//            break;
-//        case '%':cout<<n1 % n2<<endl;
-//            break;
-//
-//        default: cout<<"輸入不正確"<<endl;
-//    }
-//    return 0;
-//
-//}
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //回圈
 //#include <iostream>
@@ -136,28 +111,41 @@
 //}
 
 
-//找出陣列內的最大值
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//情況
+
 //#include <iostream>
 //using namespace std;
 //
 //int main(){
-//    int n = 4;
-//    int a[]={3,67,92,11};
 //
-//    int maxNumber=0, i;
-//    for(i=0;i<n;i++)
-//        if(a[i]>a[maxNumber])
-//            maxNumber=i;
+//    int n1,n2;
+//    char op;
+//    cout<<"順序輸入第1個數，運算子，第2個數";
+//    cin>>n1>>op>>n2;
+//    switch(op){
+//        case '+':cout<<n1 + n2<<endl;
+//            break;
+//        case '-':cout<<n1 - n2<<endl;
+//            break;
+//        case '*':cout<<n1 * n2<<endl;
+//            break;
+//        case '/':cout<<n1 / n2<<endl;
+//            break;
+//        case '%':cout<<n1 % n2<<endl;
+//            break;
 //
-//    for(i=0;i<n;i++)
-//        cout<<a[i]<<"";
-//
-//    cout<<endl;
-//    cout<<"最大數元素是 a["<<maxNumber<<"]，而值是"<<a[maxNumber]<<endl;
-//
+//        default: cout<<"輸入不正確"<<endl;
+//    }
 //    return 0;
 //
 //}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//隨機
+
 
 //m至n的隨機數公式是rand()%(n-m+1)+m
 //1至4的隨機數
@@ -182,6 +170,34 @@
 //
 //}
 
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//搜尋與排序
+
+
+//搜尋陣列內的最大值
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//    int n = 4;
+//    int a[]={3,67,92,11};
+//
+//    int maxNumber=0, i;
+//    for(i=0;i<n;i++)
+//        if(a[i]>a[maxNumber])
+//            maxNumber=i;
+//
+//    for(i=0;i<n;i++)
+//        cout<<a[i]<<"";
+//
+//    cout<<endl;
+//    cout<<"最大數元素是 a["<<maxNumber<<"]，而值是"<<a[maxNumber]<<endl;
+//
+//    return 0;
+//
+//}
 
 //順序搜尋；跳出回圈break
 //#include <iostream>
@@ -243,9 +259,74 @@
 //
 //}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//方法
+
+//用遞迴的方法去計算1＋2＋3＋....+n
+//#include <iostream>
+//using namespace std;
+//
+//int g(int n){
+//    if(n==1)
+//        return 1;
+//    else
+//        return g(n-1)+n;
+//}
+//
+//int main(){
+//    cout<<"g(6) = "<<g(6)<<endl;
+//    return 0;
+//}
 
 
-//傳數值引用
+//用多載去比較數值
+//#include <iostream>
+//using namespace std;
+//
+//int comp(int,int);
+//float comp(float,float,float);
+//int main(){
+//    cout<<"1.1,3.1,2.2那個數更大？ 是"<<comp(1.1,3.1,2.2)<<endl;
+//}
+//
+//int comp(int a,int b){
+//    return(a>b)?a:b;
+//}
+//
+//float comp(float a,float b,float c){
+//    float x;
+//    x=(a>b)?a:b;
+//    return (c>x)?c:x;
+//}
+
+//用字串string 計算每行文字的字數。
+//#include <iostream>
+//#include <string>
+//#include <cctype>
+//using namespace std;
+//int main(){
+//    string inputline;
+//    while(getline(cin,inputline)){
+//        int n=0;
+//        int i;
+//        int leng = inputline.length();
+//
+//        for(i=0;i<leng;i++){
+//            if(isalpha(inputline[i]) && !isalpha(inputline[i+1]))
+//                n++;
+//        }
+//        cout<<n<<endl;
+//    }
+//    return 0;
+//
+//}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//參數傳遞
+
+//傳值引用
 //#include <iostream>
 //using namespace std;
 //
@@ -269,8 +350,7 @@
 ////}
 
 
-
-//傳地址引用
+//傳址引用
 //#include <iostream>
 //using namespace std;
 //
@@ -313,6 +393,96 @@
 //    a=b;
 //    b=temp;
 //}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//類別
+
+//類別的解構子
+//#include <iostream>
+//#include <cstring>
+//using namespace std;
+//
+//class MathsSubject{
+//private:
+//    char student[20];
+//    int score;
+//
+//public:
+//    MathsSubject();
+//    void showstudent();
+//    MathsSubject(char *name,int A);
+//
+//    ~MathsSubject(){
+//        cout<<"將會被釋放的保存資源為："<<student<<endl;
+//    }
+//};
+//
+//MathsSubject::MathsSubject(){             // 兩個冒號是範圍運算子，將類別內的方法內容寫在類別以外。
+//    strcpy(student,"家寶");
+//    score=66;
+//}
+//
+//MathsSubject::MathsSubject(char *name,int A){
+//    strcpy(student, name);
+//    score=A;
+//}
+//
+//void MathsSubject::showstudent(){
+//    cout<<"學生名字："<<student<<endl;
+//    cout<<"數學得分："<<score<<endl;
+//}
+//
+//void calculate_score(){
+//    MathsSubject s1;
+//    MathsSubject s2("小宁",65);
+//    s1.showstudent();
+//    s2.showstudent();
+//}
+//
+//int main(){
+//    calculate_score();
+//
+//    return 0;
+//}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//繼承
+
+//以protected作為繼承的關係
+//#include <iostream>
+//using namespace std;
+//
+//class A{
+////private:
+////    void A2();
+//
+//public:
+//    void A1();
+//};
+//
+//class B:protected A{
+//public:
+//    void B1(){
+//        A1();           //下層以protected關係繼承上，下層也可以引用上層。
+//    }
+//};
+//
+//int main(){
+//    A A1_1;
+//    A1_1.A1();
+//
+//    B B1_1;
+//    //B1_1.A1();         //下層以protected關係繼承上，實例化下層物件，是不可以引用上層的方法。
+//}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//定義類別的運算子
 
 
 //定義類別之間的加法
@@ -389,6 +559,8 @@
 //    return 0;
 //}
 
+
+
 //類別的型態轉換
 //#include <iostream>
 //using namespace std;
@@ -448,64 +620,8 @@
 //}
 
 
-//用字串string 計算每行文字的字數。
-//#include <iostream>
-//#include <string>
-//#include <cctype>
-//using namespace std;
-//int main(){
-//    string inputline;
-//    while(getline(cin,inputline)){
-//        int n=0;
-//        int i;
-//        int leng = inputline.length();
-//
-//        for(i=0;i<leng;i++){
-//            if(isalpha(inputline[i]) && !isalpha(inputline[i+1]))
-//                n++;
-//        }
-//        cout<<n<<endl;
-//    }
-//    return 0;
-//
-//}
-
-//用遞迴的方法去計算1＋2＋3＋....+n
-//#include <iostream>
-//using namespace std;
-//
-//int g(int n){
-//    if(n==1)
-//        return 1;
-//    else
-//        return g(n-1)+n;
-//}
-//
-//int main(){
-//    cout<<"g(6) = "<<g(6)<<endl;
-//    return 0;
-//}
-
-
-//用多載去比較數值
-//#include <iostream>
-//using namespace std;
-//
-//int comp(int,int);
-//float comp(float,float,float);
-//int main(){
-//    cout<<"1.1,3.1,2.2那個數更大？ 是"<<comp(1.1,3.1,2.2)<<endl;
-//}
-//
-//int comp(int a,int b){
-//    return(a>b)?a:b;
-//}
-//
-//float comp(float a,float b,float c){
-//    float x;
-//    x=(a>b)?a:b;
-//    return (c>x)?c:x;
-//}
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+//泛型
 
 //未確定的變數形態，稱為泛型
 //#include <iostream>
@@ -523,51 +639,66 @@
 //    cout<<"2.2+3.3= "<<add(2.2,3.3)<<endl;
 //}
 
-//類別的解構子
+
+
+//没有固定形態，没有固定常數
 //#include <iostream>
-//#include <cstring>
 //using namespace std;
 //
-//class MathsSubject{
+//template<class T,int N>
+//class IntAdd{
 //private:
-//    char student[20];
-//    int score;
+//    T Total;
+//    T Num[N];
 //
 //public:
-//    MathsSubject();
-//    void showstudent();
-//    MathsSubject(char *name,int A);
+//    IntAdd(){Total=0;}
 //
-//    ~MathsSubject(){
-//        cout<<"將會被釋放的保存資源為："<<student<<endl;
-//    }
+//    void Input(void);
+//    void AddMethod(void);
+//    void Ans(void);
 //};
 //
-//MathsSubject::MathsSubject(){
-//    strcpy(student,"家寶");
-//    score=66;
+//template <class T,int N> void IntAdd<T,N>::Input(void){
+//    for(int count=0;count<N;count++){
+//        cout<<"輸入數字：";
+//        cin>>Num[count];
+//    }
 //}
 //
-//MathsSubject::MathsSubject(char *name,int A){
-//    strcpy(student, name);
-//    score=A;
+//template <class T,int N> void IntAdd<T,N>::AddMethod(void){
+//    for(int count=0;count<N;count++){
+//        Total+=Num[count];
+//    }
 //}
 //
-//void MathsSubject::showstudent(){
-//    cout<<"學生名字："<<student<<endl;
-//    cout<<"數學得分："<<score<<endl;
-//}
-//
-//void calculate_score(){
-//    MathsSubject s1;
-//    MathsSubject s2("小宁",65);
-//    s1.showstudent();
-//    s2.showstudent();
+//template <class T,int N> void IntAdd<T,N>::Ans(void){
+//    AddMethod();
+//    for(int count=0;count<N;count++){
+//        cout << Num[count];
+//        if(count<(N-1)){
+//            cout<<"+";
+//        }
+//    }
+//    cout<<"="<<Total<<endl;
 //}
 //
 //int main(){
-//    calculate_score();
+//    IntAdd<int,4> Cal_1;
+//
+//    cout<<"<計算4個整數的總和>"<<endl;
+//    Cal_1.Input();
+//    Cal_1.Ans();
 //
 //    return 0;
 //}
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//#include <iostream>
+//using namespace std;
+//
+//int main(){
+//
+//}
