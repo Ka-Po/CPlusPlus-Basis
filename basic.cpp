@@ -568,15 +568,8 @@
 //class CHD;
 //class HKD{
 //    float HK_Exchange_Rate;
-//
 //public:
-//    HKD(){
-//        HK_Exchange_Rate=40;
-//    }
-//    HKD(float Rate){
-//        HK_Exchange_Rate=Rate;
-//    }
-//friend istream& operator >> (istream& in,HKD& Tmp_Money);
+//    friend istream& operator >> (istream& in,HKD& Tmp_Money);
 //    operator CHD();
 //};
 //
